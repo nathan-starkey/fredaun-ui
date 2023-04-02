@@ -1,0 +1,32 @@
+:root {
+  --unit-sidebar-width: 320px;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.app {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.body {
+  align-items: stretch;
+  display: flex;
+  flex-grow: 1;
+}
+
+.sidebar {
+  min-width: var(--unit-sidebar-width);
+  width: var(--unit-sidebar-width);
+}
+
+.main {
+  flex-grow: 1;
+  max-width: calc(100% - calc(2 * var(--unit-sidebar-width)));
+}
