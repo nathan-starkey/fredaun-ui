@@ -10,14 +10,25 @@
   --color-palette-neutral-800: rgb(37, 37, 37);
   --color-palette-neutral-900: rgb(30, 30, 30);
 
+  --color-palette-primary-400: rgb(0, 127, 212);
+  --color-palette-primary-800: rgb(4, 57, 94);
+
+  --color-text-muted: var(--color-palette-neutral-300);
   --color-text-default: var(--color-palette-neutral-100);
   --color-text-selected: var(--color-palette-neutral-50);
+  --color-text-placeholder: var(--color-palette-neutral-300);
 
   --color-background: var(--color-palette-neutral-700);
   --color-background-light: var(--color-palette-neutral-600);
   --color-background-lighter: var(--color-palette-neutral-500);
   --color-background-dark: var(--color-palette-neutral-800);
   --color-background-darker: var(--color-palette-neutral-900);
+  --color-background-selected: var(--color-palette-primary-800);
+
+  --color-border-selected: var(--color-palette-primary-400);
+
+  --image-overlay-hover: linear-gradient(rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.03));
+  --image-overlay-active: linear-gradient(rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.06));
 }
 
 html {
@@ -26,6 +37,8 @@ html {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 11pt;
 }
+
+/* App theme */
 
 .header {
   background-color: var(--color-background-lighter);
@@ -41,4 +54,34 @@ html {
 
 .footer {
   background-color: var(--color-background-light);
+}
+
+/* Utility classes */
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+/* Components */
+
+input, select, textarea, button {
+  background: var(--color-background-lighter);
+  color: var(--color-text-default);
+}
+
+input:focus, select:focus, textarea:focus, button:focus, .selected {
+  outline-color: var(--color-border-selected);
+}
+
+button:hover {
+  background-image: var(--image-overlay-hover);
+}
+
+button:active {
+  background-image: var(--image-overlay-active);
+}
+
+.selected {
+  background: var(--color-background-selected);
+  color: var(--color-text-selected);
 }

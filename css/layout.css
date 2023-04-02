@@ -5,7 +5,10 @@
 html, body {
   height: 100%;
   margin: 0;
+  user-select: none;
 }
+
+/* App layout */
 
 .app {
   align-items: stretch;
@@ -29,4 +32,105 @@ html, body {
 .main {
   flex-grow: 1;
   max-width: calc(100% - calc(2 * var(--unit-sidebar-width)));
+}
+
+/* Utility classes */
+
+.block-padding {
+  padding: 16px;
+}
+
+.inline-padding {
+  display: inline-block;
+  padding: 4px 8px;
+}
+
+.cell-padding {
+  padding: 5px 9px;
+}
+
+.uniform-padding {
+  display: inline-block;
+  padding: 4px;
+}
+
+.inline-row {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1px;
+}
+
+.selected .hide-when-selected, :not(.selected) .hide-unless-selected {
+  display: hidden;
+}
+
+.float-end {
+  float: right;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.fill-width {
+  width: 100% !important;
+}
+
+.vertical-align-middle {
+  vertical-align: middle;
+}
+
+.gap-1 {
+  margin-top: 1px;
+}
+
+.gap-4 {
+  margin-top: 4px;
+}
+
+.gap-16 {
+  margin-top: 16px;
+}
+
+/* Component design */
+
+table {
+  border-spacing: 1px;
+}
+
+td {
+  vertical-align: top;
+}
+
+input, textarea, select, button {
+  border: none;
+  box-sizing: border-box;
+  font: inherit;
+  padding: 4px 8px;
+}
+
+input:not([type=checkbox]):not([type=radio]), textarea, select {
+  width: 256px;
+}
+
+textarea {
+  height: auto;
+  resize: none;
+}
+
+select {
+  height: 24px;
+  padding: 0 8px;
+}
+
+button {
+  cursor: pointer;
+}
+
+button .bi {
+  vertical-align: -3px;
+}
+
+input:focus, textarea:focus, select:focus, button:focus, .selected {
+  outline: 1px solid black;
 }
