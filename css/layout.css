@@ -72,7 +72,7 @@ html, body {
   flex-grow: 1;
 }
 
-.fill-width {
+.width-100-percent {
   width: 100% !important;
 }
 
@@ -80,16 +80,28 @@ html, body {
   vertical-align: middle;
 }
 
-.gap-1 {
+.gap-y-1 {
   margin-top: 1px;
 }
 
-.gap-4 {
+.gap-y-4 {
   margin-top: 4px;
 }
 
-.gap-16 {
+.gap-y-16 {
   margin-top: 16px;
+}
+
+.gap-x-1 {
+  margin-left: 1px;
+}
+
+.gap-x-4 {
+  margin-left: 4px;
+}
+
+.gap-x-16 {
+  margin-left: 16px;
 }
 
 /* Component design */
@@ -131,6 +143,43 @@ button .bi {
   vertical-align: -3px;
 }
 
-input:focus, textarea:focus, select:focus, button:focus, .selected {
+:focus, :invalid, .selected, .outline {
   outline: 1px solid black;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1px;
+}
+
+.list-item {
+  text-align: left;
+  width: 100%;
+}
+
+.list-item-type {
+  float: right;
+}
+
+.list-item-thumbnail {
+  display: none;
+}
+
+.grid .list-item {
+  font-size: 9pt;
+  padding: 4px;
+  width: 71px;
+}
+
+.grid .list-item-type {
+  float: none;
+}
+
+.grid .list-item-thumbnail {
+  display: block;
+  height: 63px;
+  margin-top: 4px;
+  width: 63px;
 }
